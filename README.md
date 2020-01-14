@@ -9,7 +9,7 @@
 * Obs 2
 * Obs 3
 
-## Dificultades en ejercicios de tarea
+### Dificultades en ejercicios de tarea
 * Dif 1
 * Dif 2
 * Dif 3
