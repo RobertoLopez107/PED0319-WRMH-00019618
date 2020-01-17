@@ -1,15 +1,23 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
-long int factorial(int n);
+struct employee{
+    string name;
+    float salary;
+    int age, workingYears;
+    char gender;
+};
 
-int main(void){
-    cout << factorial(8) << endl;
-}
-
-long int factorial(int n){
-    if(n == 0 || n == 1)
-        return 1;
+if(gender == 'F' || gender =='f'){
+    if(workingYears >= 25 && age >= 60)
+        return true;
     else
-        return n * factorial(n - 1);
+        return false;
+}
+else{
+    if(workingYears >= 25 && age >= 65)
+        return true;
+    else
+        return false;
 }
