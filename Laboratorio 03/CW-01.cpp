@@ -1,23 +1,25 @@
 #include <iostream>
-#include <string>
 using namespace std;
 
-struct employee{
-    string name;
-    float salary;
-    int age, workingYears;
-    char gender;
+struct Address{
+    int houseNumber;
+    string city, state;
 };
 
-if(gender == 'F' || gender =='f'){
-    if(workingYears >= 25 && age >= 60)
-        return true;
-    else
-        return false;
-}
-else{
-    if(workingYears >= 25 && age >= 65)
-        return true;
-    else
-        return false;
+struct personalInfo{
+    Address personalAddress;
+    string name;
+    int age;
+};
+
+int main(void){
+    personalInfo p1;
+    
+    cout << "Nombre: "; cin >> p1.name;
+    cout << "Edad: "; cin >> p1.age;
+    cout << "Num casa: "; cin >> p1.personalAddress.houseNumber;
+    cout << "Ciudad: "; cin >> p1.personalAddress.city;
+    cout << "Estado: "; cin >> p1.personalAddress.state;
+
+    return 0;
 }
