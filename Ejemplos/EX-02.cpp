@@ -50,8 +50,9 @@ int main(void){
     } while(option != 0);
 
     (empty(st)) ? cout << "La pila esta vacia" : cout << "La pila no esta vacia";
+    cout << endl << endl;
 
-    cout << "Se han creado " << size(st) << " nuevos correos" << endl;
+    cout << "Se han creado " << size(st) << " nuevos correos" << endl << endl;
     aux = top(st);
 
     cout << "Datos del ultimo correo anadido" << endl;
@@ -60,7 +61,7 @@ int main(void){
     cout << "Pais:\t" << aux.country << endl;
     cout << "Codigo postal:\t" << aux.postalCode << endl;
     cout << "Telefono:\t" << aux.phone << endl;
-    cout << "Correo electronico:\t" << aux.mail << endl;
+    cout << "Correo electronico:\t" << aux.mail << endl << endl;
 
     cout << "Eliminando ultimo correo electronico" << endl;
     st = pop(st);
@@ -80,7 +81,7 @@ node* push(node* st, T aux){
     insert->next = st;
     st = insert;
 
-    // Retorno de la lista modificada
+    // Retorno de la cola modificada
     return st;
 }
 
@@ -88,9 +89,6 @@ node* push(node* st, T aux){
 T top(node* st){
     // Declaracion de nodo auxiliar a devolver
     node* aux = st;
-
-    // Desconexion de los demas nodos de la lista
-    aux->next = NULL;
 
     // Si auxiliar esta vacia, entonces retornar un elemento vacio, sino retornar el elemento en el nodo
     if(!aux){
@@ -103,7 +101,7 @@ T top(node* st){
     /*
         Aclaraciones
         * Si la pila esta vacia, la funcion retornara una variable de tipo T por defecto vacia
-        * Al enviarse el puntero de la lista por valor, no se pierde la conexion de todos los nodos en el main
+        * Al enviarse el puntero de la cola por valor, no se pierde la conexion de todos los nodos en el main
     */
 }
 
